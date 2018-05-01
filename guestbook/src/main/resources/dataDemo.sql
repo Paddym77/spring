@@ -1,0 +1,4 @@
+    INSERT INTO ENTRIES (COMMENT, USER) VALUES ('Great Comment', 'john');
+    INSERT INTO ENTRIES (COMMENT, USER) VALUES ('Me Too!', 'jane');
+    INSERT INTO ENTRIES (COMMENT, USER) VALUES ('I agree.', 'alice');
+    INSERT INTO ENTRIES (COMMENT, USER) VALUES ('Of course!', 'john');
