@@ -11,29 +11,29 @@ import java.util.List;
     @Service
     public class PlayerService {
         @Autowired
-        private PlayerRepository guestBookEntryRepository;
+        private PlayerRepository playerEntryRepository;
         public List<PlayerEntry> findAllEntries () {
-            return this.guestBookEntryRepository.findAll ();
+            return this.playerEntryRepository.findAll ();
         }
 
         public PlayerEntry findplayerEntryById(Integer id) {
 
-            return this.guestBookEntryRepository.findGuestBookEntryById(id);
+            return this.playerEntryRepository.findPlayerEntryById(id);
 
         }
         public List <PlayerEntry> findplayerEntryByUser(String user) {
-            return this.guestBookEntryRepository.findGuestBookEntryByUser (user);
+            return this.playerEntryRepository.findPlayerEntryByUser(user);
         }
 
         public void deleteplayerEntryById(Integer id) {
-            this.guestBookEntryRepository.delete (id);
+            this.playerEntryRepository.delete (id);
         }
 
         public void save (PlayerEntry newEntry) {
-            this.guestBookEntryRepository.save (newEntry);
+            this.playerEntryRepository.save (newEntry);
         }
         public PlayerEntry findOne (Integer id) {
-            return this.guestBookEntryRepository.findOne (id);
+            return this.playerEntryRepository.findOne (id);
         }
 
 

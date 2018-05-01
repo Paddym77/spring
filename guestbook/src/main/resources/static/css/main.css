@@ -1,19 +1,24 @@
 body {
-    background-color: lightblue;
+    background-color: royalblue;
     font-family: sans-serif;
+    text-align: center;
+
 }
 table {
     border: 2px solid black;
     border-radius: 8px;
+    text-align: center;
+    margin: 0 auto;
+
 }
 th {
     font-size: 150%;
-    text-align: left;
-    background-color: aquamarine;
+    text-align: center;
+    background-color: burlywood;
     padding: 10px;
 }
 td {
-    text-align: left;
+    text-align: center;
     background-color: azure;
     padding: 4px;
 }
@@ -32,4 +37,8 @@ a:hover {
     padding: 8px;
     border: 2px yellow;
     border-radius: 5px;
+}
+#nufc{
+    height: 150px;
+    width: 150px;
 }

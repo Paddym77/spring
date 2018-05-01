@@ -3,15 +3,15 @@
 <head>
     <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}" />
     <meta charset="UTF-8"/>
-    <title>Spring Guestbook</title>
+    <title>Player</title>
 </head>
 <body>
-<img th:src="@{/css/images/index.jpeg}" />
-    <h1> Guestbook Comments</h1>
+<img th:src="@{/css/images/index.png}" id="nufc" />
+    <h1> Player Information</h1>
     <div th:if="${!entries.isEmpty()}">
     <table>
         <tr>
-            <th>User</th><th>Comment</th><th></th><th></th>
+            <th>Player</th><th>Appearances</th><th></th><th></th>
         </tr>
         <tr th:each="entry: ${entries}">
             <td th:text="${entry.user}"></td>
@@ -24,18 +24,23 @@
 
 <h2 th:text="${formHeader}"></h2>
 <form th:object="${newEntry}" method="post">
-    <label>User: </label>
+    <label>Player: </label><br />
     <input type="text" size="32" th:field="*{user}" />
-    <label>Comment: </label>
-    <input type="text" size="64" th:field="*{comment}" />
-
+    <br />
+    <br />
+    <label>Appearances: </label><br />
+    <input type="text" size="32" th:field="*{comment}" />
+    <br />
+    <br />
     <input type="submit" value="Submit" />
-    <p class="warning" th:if="${#fields.hasErrors('user')}">User cannot be empty.</p>
-    <p class="warning" th:if="${#fields.hasErrors('comment')}">Comment cannot be empty.</p>
+    <p class="warning" th:if="${#fields.hasErrors('user')}">Player cannot be empty.</p>
+    <p class="warning" th:if="${#fields.hasErrors('comment')}">Appearances cannot be empty.</p>
+    <br />
+    <br />
     <input type="reset" value="Reset" />
 </form>
 <div th:if="${entries.isEmpty()}">
-        <p>There are no comments in the Guestbook. What a pity.</p>
+        <p>There is no player information added.</p>
     </div>
 
 

@@ -9,9 +9,9 @@ public interface PlayerRepository
     @Override
     List<PlayerEntry> findAll ();
 
-    PlayerEntry findGuestBookEntryById (Integer id);
+    PlayerEntry findPlayerEntryById(Integer id);
 
 
-    List<PlayerEntry> findGuestBookEntryByUser (String user);
+    List<PlayerEntry> findPlayerEntryByUser(String user);
 
 }
